@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div
+        class="left"
+        id="leftG"
+        onmouseover="showList()"
+        onmouseout="hideList()"
+      >
+        <div class="list list-1" id="list">
+          <img src="profile.webp" alt="" />
+          <h4 id="para">Abdullah</h4>
+        </div>
+        <div class="list" id="list">
+          <i class="fa-solid fa-house"></i>
+          <p class="paraX">dashboard</p>
+        </div>
+        <div class="list" id="list">
+          <i class="fa-solid fa-users"></i>
+          <p class="paraX">clients</p>
+        </div>
+        <div class="list" id="list">
+          <i class="fa-solid fa-calendar-days"></i>
+          <p class="paraX">products</p>
+        </div>
+        <div class="list" id="list">
+          <i class="fa-solid fa-chart-pie"></i>
+          <p class="paraX">charts</p>
+        </div>
+        <div class="list" id="list">
+          <i class="fa-solid fa-pencil"></i>
+          <p class="paraX">posts</p>
+        </div>
+        <div class="list" id="list">
+          <i class="fa-solid fa-star"></i>
+          <p class="paraX">favorite</p>
+        </div>
+        <div class="list">
+          <i class="fa-solid fa-gear"></i>
+          <p class="paraX">setting</p>
+        </div>
+        <div class="list">
+          <i></i>
+          <p class="paraX"></p>
+        </div>
+      </div>
+      <div class="right">
+        <div class="nav">
+          <p>dashboard</p>
+          <i class="fa-sharp fa-solid fa-list"></i>
+        </div>
+        <div class="top-container">
+          <div class="box">
+            <div class="box-box">
+              <i class="fa-solid fa-user"></i>
+              <div class="box-box-box">
+                <p>users</p>
+                <p class="p">100</p>
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="box-box">
+              <i class="fa-solid fa-pencil"></i>
+              <div class="box-box-box">
+                <p>posts</p>
+                <p class="p">34</p>
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="box-box">
+              <i class="fa-solid fa-calendar-days"></i>
+              <div class="box-box-box">
+                <p>products</p>
+                <p class="p">654</p>
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="box-box">
+              <i class="fa-solid fa-dollar-sign"></i>
+              <div class="box-box-box">
+                <p>revenue</p>
+                <p class="p">$143</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="secondary-nav">
+          <p>products</p>
+          <i class="fa-solid fa-calendar-days"></i>
+        </div>
+        <div class="table">
+          <div class="col-1">
+            <div class="row-1">product</div>
+            <div class="row">tv</div>
+            <div class="row">laptop</div>
+            <div class="row">phone</div>
+            <div class="row">wash machine</div>
+            <div class="row">keyboard</div>
+            <div class="row">tv</div>
+            <div class="row">laptop</div>
+            <div class="row">phone</div>
+          </div>
+          <div class="col-2">
+            <div class="row-1">price</div>
+            <div class="row"><p class="para-1">$887</p></div>
+            <div class="row"><p class="para-1">$887</p></div>
+            <div class="row"><p class="para-1">$887</p></div>
+            <div class="row"><p class="para-1">$887</p></div>
+            <div class="row"><p class="para-1">$887</p></div>
+            <div class="row"><p class="para-1">$887</p></div>
+            <div class="row"><p class="para-1">$887</p></div>
+            <div class="row"><p class="para-1">$887</p></div>
+          </div>
+          <div class="col-3">
+            <div class="row-1">count</div>
+            <div class="row"><p class="para-2">123</p></div>
+            <div class="row"><p class="para-2">123</p></div>
+            <div class="row"><p class="para-2">123</p></div>
+            <div class="row"><p class="para-2">123</p></div>
+            <div class="row"><p class="para-2">123</p></div>
+            <div class="row"><p class="para-2">123</p></div>
+            <div class="row"><p class="para-2">123</p></div>
+            <div class="row"><p class="para-2">123</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function showList() {
+        var x = document.getElementById('para').style;
+        var y = document.getElementById('leftG').style;
+        const z = document.getElementsByClassName('list');
+        const u = document.getElementsByClassName('paraX');
+        x.display = 'flex';
+
+        for (i = 0; i < 8; i++) {
+          z[i].width = '300px';
+
+          u[i].style.display = 'block';
+          z[i].style.paddingLeft = '40px';
+          z[i].style.justifyContent = 'start';
+
+          y.width = '400px';
+        }
+      }
+      function hideList() {
+        var x = document.getElementById('para').style;
+        var y = document.getElementById('leftG').style;
+        const z = document.getElementsByClassName('list');
+        const u = document.getElementsByClassName('paraX');
+        x.display = 'none';
+
+        for (i = 0; i < 8; i++) {
+          z[i].width = '300px';
+
+          u[i].style.display = 'none';
+          z[i].style.paddingLeft = '0px';
+          z[i].style.justifyContent = 'center';
+        }
+        y.width = '7%';
+      }
+    </script>
+  </body>
+</html>
